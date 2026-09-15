@@ -793,13 +793,15 @@
     const bar = $('#rsvpbar');
     const sentinel = $('#hero-sentinel');
     const rsvp = $('#rsvp');
+    const closing = $('.closing');
     if (!bar || !sentinel || !rsvp || !('IntersectionObserver' in window)) return;
 
     let pastHero = false;
     let atRsvp = false;
+    let atClosing = false;
 
     const sync = () => {
-      const show = pastHero && !atRsvp;
+      const show = pastHero && !atRsvp && !atClosing;
       bar.hidden = false;
       bar.classList.toggle('is-visible', show);
     };
@@ -813,6 +815,15 @@
       atRsvp = entry.isIntersecting;
       sync();
     }, { threshold: 0.25 }).observe(rsvp);
+
+    /* La confirmación por WhatsApp ya está repetida en el cierre; ahí la
+       barra flotante solo taparía la firma y las flores de las esquinas. */
+    if (closing) {
+      new IntersectionObserver(([entry]) => {
+        atClosing = entry.isIntersecting;
+        sync();
+      }, { threshold: 0.15 }).observe(closing);
+    }
   }
 
 

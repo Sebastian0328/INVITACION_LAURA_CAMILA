@@ -117,14 +117,18 @@ const EVENT_CONFIG = {
       src: './assets/images/foto-04.webp',
       alt: 'Laura Camila Trujillo Acosta junto a un caballo blanco en el campo',
       position: '44% 38%'
+    },
+    intro: {
+      src: './assets/images/galeria-01.webp',
+      alt: 'Laura Camila Trujillo Acosta junto a la fuente del jardín',
+      position: '52% 20%'
     }
   },
 
   /* ── Galería deslizable (carrusel táctil) ────────────────────────────────
-     Añade o quita elementos libremente.                                    */
-  gallery: [
-    { src: './assets/images/galeria-01.webp', alt: 'Laura Camila Trujillo Acosta junto a la fuente del jardín', position: '52% 20%' }
-  ],
+     Añade o quita elementos libremente. La fotografía de la fuente se
+     reubicó junto a la presentación inicial (ver photos.intro).            */
+  gallery: [],
 
   /* ── Itinerario ──────────────────────────────────────────────────────────
      `icon` acepta: recepcion, entrada, cena, vals, brindis, baile, despedida. */

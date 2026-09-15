@@ -46,61 +46,104 @@
      ═══════════════════════════════════════════════════════════════════ -->
 <svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0"><defs>
 
-  <g id="o-rosa">
-    <circle r="26" fill="#F1C2CE"/>
-    <path d="M0,-26A26,26 0 0 1 26,0A20,20 0 0 0 0,-20Z" fill="#EAAEBF"/>
-    <path d="M-26,0A26,26 0 0 1 0,26A20,20 0 0 0 -20,0Z" fill="#EAAEBF"/>
-    <circle r="17" fill="#EDB8C8"/>
-    <path d="M0,-17A17,17 0 0 1 17,0A12,12 0 0 0 0,-12Z" fill="#E4A1B5"/>
-    <path d="M-17,0A17,17 0 0 1 0,17A12,12 0 0 0 -12,0Z" fill="#E4A1B5"/>
-    <circle r="9.5" fill="#E29DB1"/>
-    <path d="M-9.5,0A9.5,9.5 0 0 1 9.5,0A6,6 0 0 0 -6,0Z" fill="#D98DA3"/>
-    <circle r="4" fill="#CE7F96"/>
+  <!-- Gradientes acuarela — varios tonos de rosa empolvado por pétalo -->
+  <radialGradient id="g-rosa-a" cx="38%" cy="32%" r="75%">
+    <stop offset="0%" stop-color="#F7DCE4"/><stop offset="55%" stop-color="#E9A9BE"/><stop offset="100%" stop-color="#D0839A"/>
+  </radialGradient>
+  <radialGradient id="g-rosa-b" cx="42%" cy="36%" r="75%">
+    <stop offset="0%" stop-color="#F2C9D6"/><stop offset="60%" stop-color="#DE96AC"/><stop offset="100%" stop-color="#C67892"/>
+  </radialGradient>
+  <radialGradient id="g-rosa-core" cx="40%" cy="34%" r="80%">
+    <stop offset="0%" stop-color="#E8B2C2"/><stop offset="100%" stop-color="#BD6C86"/>
+  </radialGradient>
+  <radialGradient id="g-rosaclara-a" cx="38%" cy="30%" r="78%">
+    <stop offset="0%" stop-color="#FFFCFA"/><stop offset="60%" stop-color="#F7E9E6"/><stop offset="100%" stop-color="#EAD2CE"/>
+  </radialGradient>
+  <radialGradient id="g-rosaclara-b" cx="42%" cy="34%" r="78%">
+    <stop offset="0%" stop-color="#FBF0EC"/><stop offset="60%" stop-color="#EFDAD6"/><stop offset="100%" stop-color="#DFC0BB"/>
+  </radialGradient>
+  <radialGradient id="g-peonia-a" cx="40%" cy="30%" r="78%">
+    <stop offset="0%" stop-color="#FAE1EA"/><stop offset="65%" stop-color="#EFC0D2"/><stop offset="100%" stop-color="#DFA1B9"/>
+  </radialGradient>
+  <radialGradient id="g-peonia-b" cx="44%" cy="34%" r="78%">
+    <stop offset="0%" stop-color="#F3CBDB"/><stop offset="65%" stop-color="#E4A9C0"/><stop offset="100%" stop-color="#CE84A0"/>
+  </radialGradient>
+  <radialGradient id="g-hortensia" cx="38%" cy="30%" r="80%">
+    <stop offset="0%" stop-color="#FBE3EA"/><stop offset="70%" stop-color="#EFC5D3"/><stop offset="100%" stop-color="#DDA3B6"/>
+  </radialGradient>
+  <linearGradient id="g-hoja" x1="0" y1="0" x2="1" y2=".3">
+    <stop offset="0%" stop-color="#C9D4BF"/><stop offset="55%" stop-color="#AEBFA3"/><stop offset="100%" stop-color="#93A886"/>
+  </linearGradient>
+  <linearGradient id="g-eucalipto" x1="0" y1="0" x2="1" y2=".2">
+    <stop offset="0%" stop-color="#D3D9C4"/><stop offset="100%" stop-color="#AEBB9C"/>
+  </linearGradient>
+
+  <!-- Filtro acuarela — desplaza ligeramente los bordes para que no se vean vectoriales -->
+  <filter id="f-water" x="-45%" y="-45%" width="190%" height="190%">
+    <feTurbulence type="fractalNoise" baseFrequency=".04 .06" numOctaves="2" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5.5"/>
+    <feGaussianBlur stdDeviation=".35"/>
+  </filter>
+  <filter id="f-water-sm" x="-50%" y="-50%" width="200%" height="200%">
+    <feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="2" seed="9" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/>
+  </filter>
+
+  <g id="o-rosa" filter="url(#f-water)">
+    <path d="M2,-27C15,-25 27,-15 25,-1C23,7 12,6 3,3C10,10 14,20 6,26C-2,31 -13,24 -14,13C-16,22 -25,26 -32,19C-38,13 -33,2 -24,-3C-33,-6 -38,-16 -30,-23C-23,-29 -12,-24 -8,-15C-9,-24 -3,-30 2,-27Z" fill="url(#g-rosa-a)" opacity=".92"/>
+    <path d="M0,-17A17,18 8 0 1 16,-2A12,13 0 0 0 1,-11Z" fill="url(#g-rosa-b)" opacity=".85" transform="rotate(6)"/>
+    <path d="M-16,1A17,16 -6 0 1 -1,17A12,11 0 0 0 -10,2Z" fill="url(#g-rosa-b)" opacity=".85" transform="rotate(-4)"/>
+    <ellipse rx="9" ry="10.5" fill="url(#g-rosa-core)" opacity=".95" transform="rotate(-8)"/>
+    <circle r="3.6" fill="#B5657E" opacity=".7"/>
   </g>
 
-  <g id="o-rosa-clara">
-    <circle r="22" fill="#FBF3F0"/>
-    <path d="M0,-22A22,22 0 0 1 22,0A17,17 0 0 0 0,-17Z" fill="#F2E2E0"/>
-    <path d="M-22,0A22,22 0 0 1 0,22A17,17 0 0 0 -17,0Z" fill="#F2E2E0"/>
-    <circle r="13" fill="#F6EBE9"/>
-    <path d="M0,-13A13,13 0 0 1 13,0A9,9 0 0 0 0,-9Z" fill="#EBD7D5"/>
-    <circle r="6.5" fill="#E9D3D1"/>
-    <circle r="2.8" fill="#DFBE99"/>
+  <g id="o-rosa-clara" filter="url(#f-water)">
+    <path d="M1,-23C13,-21 23,-12 21,0C19,7 10,5 2,2C9,9 12,18 5,23C-2,27 -12,20 -12,10C-15,19 -22,22 -28,15C-33,10 -28,1 -20,-3C-28,-6 -32,-14 -25,-20C-19,-25 -10,-20 -6,-12C-8,-20 -3,-25 1,-23Z" fill="url(#g-rosaclara-a)" opacity=".9"/>
+    <path d="M0,-13A13,14 6 0 1 12,-1A9,9 0 0 0 1,-8Z" fill="url(#g-rosaclara-b)" opacity=".8" transform="rotate(4)"/>
+    <ellipse rx="6" ry="7" fill="#E4C7C2" opacity=".85"/>
+    <circle r="2.6" fill="#D8B583" opacity=".8"/>
   </g>
 
-  <g id="o-peonia">
-    <g fill="#F4D1DB"><ellipse rx="13" ry="24"/><ellipse rx="13" ry="24" transform="rotate(45)"/><ellipse rx="13" ry="24" transform="rotate(90)"/><ellipse rx="13" ry="24" transform="rotate(135)"/></g>
-    <g fill="#EEBDCC"><ellipse rx="10" ry="18" transform="rotate(22)"/><ellipse rx="10" ry="18" transform="rotate(67)"/><ellipse rx="10" ry="18" transform="rotate(112)"/><ellipse rx="10" ry="18" transform="rotate(157)"/></g>
-    <circle r="8" fill="#E8AABC"/><circle r="3.4" fill="#F2E0BE"/>
+  <g id="o-peonia" filter="url(#f-water)">
+    <g fill="url(#g-peonia-a)" opacity=".82">
+      <ellipse rx="13" ry="25" transform="rotate(4)"/><ellipse rx="12" ry="23" transform="rotate(48)"/>
+      <ellipse rx="13.5" ry="24" transform="rotate(93)"/><ellipse rx="12" ry="22" transform="rotate(139)"/>
+      <ellipse rx="13" ry="23" transform="rotate(183)"/>
+    </g>
+    <g fill="url(#g-peonia-b)" opacity=".85">
+      <ellipse rx="9.5" ry="17" transform="rotate(24)"/><ellipse rx="10.5" ry="19" transform="rotate(70)"/>
+      <ellipse rx="9" ry="16" transform="rotate(114)"/><ellipse rx="10" ry="18" transform="rotate(160)"/>
+    </g>
+    <circle r="7.5" fill="url(#g-rosa-core)" opacity=".9"/><circle r="3" fill="#F2E0BE" opacity=".9"/>
   </g>
 
-  <g id="o-hortensia">
-    <circle cx="0" cy="-10" r="7" fill="#F1D1DB"/><circle cx="9" cy="-3" r="7" fill="#EDC6D2"/>
-    <circle cx="6" cy="8" r="7" fill="#F1D1DB"/><circle cx="-6" cy="8" r="7" fill="#EDC6D2"/>
-    <circle cx="-9" cy="-3" r="7" fill="#F1D1DB"/><circle r="6" fill="#F5DDE5"/><circle r="2.2" fill="#E5C18B"/>
+  <g id="o-hortensia" filter="url(#f-water-sm)">
+    <circle cx="1" cy="-10" r="7.2" fill="url(#g-hortensia)" opacity=".88"/><circle cx="9.5" cy="-2" r="6.8" fill="url(#g-hortensia)" opacity=".82"/>
+    <circle cx="5.5" cy="8.5" r="7" fill="url(#g-hortensia)" opacity=".85"/><circle cx="-6.5" cy="8" r="6.6" fill="url(#g-hortensia)" opacity=".82"/>
+    <circle cx="-9" cy="-3.5" r="7" fill="url(#g-hortensia)" opacity=".85"/><circle r="5.5" fill="#F6E5EB" opacity=".9"/><circle r="2" fill="#DFB57F" opacity=".85"/>
   </g>
 
-  <g id="o-florecita">
-    <g fill="#F7E0E6"><ellipse rx="4.6" ry="8"/><ellipse rx="4.6" ry="8" transform="rotate(72)"/><ellipse rx="4.6" ry="8" transform="rotate(144)"/><ellipse rx="4.6" ry="8" transform="rotate(216)"/><ellipse rx="4.6" ry="8" transform="rotate(288)"/></g>
-    <circle r="2.6" fill="#E5C18B"/>
+  <g id="o-florecita" filter="url(#f-water-sm)">
+    <g fill="#F4D9E1" opacity=".85"><ellipse rx="4.6" ry="8" transform="rotate(4)"/><ellipse rx="4.2" ry="7.4" transform="rotate(74)"/><ellipse rx="4.7" ry="8.2" transform="rotate(141)"/><ellipse rx="4.3" ry="7.6" transform="rotate(213)"/><ellipse rx="4.6" ry="8" transform="rotate(286)"/></g>
+    <circle r="2.6" fill="#DFAF7C" opacity=".9"/>
   </g>
 
-  <path id="o-hoja" d="M0,0C14,-10 30,-8 40,4C28,14 12,13 0,0Z" fill="#B4C4AE"/>
+  <path id="o-hoja" d="M0,0C14,-10 30,-8 40,4C28,14 12,13 0,0Z" fill="url(#g-hoja)" filter="url(#f-water-sm)" opacity=".92"/>
 
-  <g id="o-eucalipto">
-    <path d="M0,0C16,-4 34,-2 52,2" stroke="#B4C4AE" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <ellipse cx="12" cy="-7" rx="7" ry="5.5" fill="#BFCDB8"/><ellipse cx="26" cy="-9" rx="7.5" ry="6" fill="#B4C4AE"/>
-    <ellipse cx="41" cy="-6" rx="6.5" ry="5" fill="#C4D0BD"/><ellipse cx="17" cy="9" rx="7" ry="5.5" fill="#B4C4AE"/>
-    <ellipse cx="33" cy="10" rx="6.5" ry="5" fill="#C4D0BD"/>
+  <g id="o-eucalipto" filter="url(#f-water-sm)">
+    <path d="M0,0C16,-4 34,-2 52,2" stroke="url(#g-eucalipto)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="12" cy="-7" rx="7" ry="5.5" fill="url(#g-eucalipto)" opacity=".9"/><ellipse cx="26" cy="-9" rx="7.5" ry="6" fill="url(#g-hoja)" opacity=".85"/>
+    <ellipse cx="41" cy="-6" rx="6.5" ry="5" fill="url(#g-eucalipto)" opacity=".9"/><ellipse cx="17" cy="9" rx="7" ry="5.5" fill="url(#g-hoja)" opacity=".85"/>
+    <ellipse cx="33" cy="10" rx="6.5" ry="5" fill="url(#g-eucalipto)" opacity=".9"/>
   </g>
 
   <path id="o-destello" d="M0,-7C.9,-2 2,-.9 7,0C2,.9 .9,2 0,7C-.9,2 -2,.9 -7,0C-2,-.9 -.9,-2 0,-7Z" fill="currentColor"/>
 
   <g id="o-mariposa">
-    <path d="M0,0C-3,-10 -16,-15 -20,-8C-23,-2 -12,3 0,0Z" fill="#EBBFC6" opacity=".9"/>
-    <path d="M0,0C3,-10 16,-15 20,-8C23,-2 12,3 0,0Z" fill="#EBBFC6" opacity=".9"/>
-    <path d="M0,0C-3,7 -13,12 -16,6C-18,1 -9,-2 0,0Z" fill="#E0A9B4" opacity=".85"/>
-    <path d="M0,0C3,7 13,12 16,6C18,1 9,-2 0,0Z" fill="#E0A9B4" opacity=".85"/>
+    <path d="M0,0C-3,-10 -16,-15 -20,-8C-23,-2 -12,3 0,0Z" fill="url(#g-rosaclara-b)" opacity=".92"/>
+    <path d="M0,0C3,-10 16,-15 20,-8C23,-2 12,3 0,0Z" fill="url(#g-rosaclara-b)" opacity=".92"/>
+    <path d="M0,0C-3,7 -13,12 -16,6C-18,1 -9,-2 0,0Z" fill="url(#g-rosa-b)" opacity=".85"/>
+    <path d="M0,0C3,7 13,12 16,6C18,1 9,-2 0,0Z" fill="url(#g-rosa-b)" opacity=".85"/>
     <path d="M0,-4V6" stroke="#C08A7C" stroke-width="1.5" stroke-linecap="round"/>
     <path d="M0,-4C-1,-8 -3,-9 -5,-10M0,-4C1,-8 3,-9 5,-10" stroke="#C08A7C" stroke-width="1" fill="none" stroke-linecap="round"/>
   </g>
@@ -211,6 +254,7 @@
       <span class="lockup__anios">años</span>
     </div>
     <h2 class="sr-only" id="t-presentacion">Mis XV años</h2>
+    <figure class="photo photo--intro reveal" data-photo="intro" data-frame="ovalo"></figure>
     <p class="name script reveal" data-bind="displayName"></p>
     <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
   </section>
@@ -273,7 +317,7 @@
   </section>
 
   <!-- ── 8 · Lugar ──────────────────────────────────────────────────── -->
-  <section class="section" aria-labelledby="t-lugar">
+  <section class="section section--venue" aria-labelledby="t-lugar">
     <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg></span>
     <h2 class="title reveal" id="t-lugar">Recepción</h2>
     <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
@@ -359,16 +403,23 @@
 
 <!-- ── 16 · Cierre ──────────────────────────────────────────────────── -->
 <footer class="closing">
-  <svg class="corner-flora corner-flora--closing-bl" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
-    <use href="#o-hoja" transform="translate(24,70) rotate(-40) scale(1.05)"/>
-    <use href="#o-eucalipto" transform="translate(12,96) rotate(-16)"/>
-    <use href="#o-rosa" transform="translate(40,104) scale(.9)"/>
-    <use href="#o-florecita" transform="translate(70,64) scale(.85)"/>
+  <svg class="corner-flora corner-flora--closing-bl reveal" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <use href="#o-hoja" transform="translate(20,78) rotate(-42) scale(1.15)"/>
+    <use href="#o-eucalipto" transform="translate(8,100) rotate(-18)"/>
+    <use href="#o-peonia" transform="translate(46,96) scale(1)"/>
+    <use href="#o-rosa" transform="translate(30,58) scale(.85)"/>
+    <use href="#o-rosa-clara" transform="translate(78,86) scale(.75)"/>
+    <use href="#o-florecita" transform="translate(70,58) scale(.9)"/>
+    <use href="#o-florecita" transform="translate(96,108) scale(.7)"/>
+    <use href="#o-mariposa" transform="translate(52,34) rotate(-14) scale(.8)"/>
   </svg>
-  <svg class="corner-flora corner-flora--closing-br" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
-    <use href="#o-hoja" transform="translate(24,70) rotate(-40) scale(.95)"/>
-    <use href="#o-peonia" transform="translate(42,100) scale(.8)"/>
-    <use href="#o-hortensia" transform="translate(76,66) scale(.85)"/>
+  <svg class="corner-flora corner-flora--closing-br reveal" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <use href="#o-hoja" transform="translate(22,74) rotate(-38) scale(1.05)"/>
+    <use href="#o-eucalipto" transform="translate(10,92) rotate(-14)"/>
+    <use href="#o-rosa" transform="translate(44,98) scale(.95)"/>
+    <use href="#o-hortensia" transform="translate(80,68) scale(.9)"/>
+    <use href="#o-rosa-clara" transform="translate(34,52) scale(.7)"/>
+    <use href="#o-florecita" transform="translate(70,102) scale(.85)"/>
   </svg>
 
   <div class="closing__inner">
@@ -377,27 +428,7 @@
       <use href="#o-mariposa" transform="translate(20,16)"/>
     </svg>
     <p class="signature script reveal" data-bind="copy.signature"></p>
-    <svg class="bouquet reveal" viewBox="0 0 360 132" aria-hidden="true">
-      <use href="#o-hoja" transform="translate(58,66) rotate(-165) scale(1.2)"/>
-      <use href="#o-hoja" transform="translate(300,68) rotate(-15) scale(1.2)"/>
-      <use href="#o-eucalipto" transform="translate(46,52) rotate(-150) scale(.9)"/>
-      <use href="#o-eucalipto" transform="translate(314,54) rotate(-30) scale(.9)"/>
-      <use href="#o-hoja" transform="translate(110,36) rotate(-125) scale(.9)"/>
-      <use href="#o-hoja" transform="translate(248,38) rotate(-55) scale(.9)"/>
-      <use href="#o-peonia" transform="translate(120,64) scale(1.05)"/>
-      <use href="#o-peonia" transform="translate(240,66) scale(.95)"/>
-      <use href="#o-rosa-clara" transform="translate(88,84) scale(.95)"/>
-      <use href="#o-rosa-clara" transform="translate(272,86) scale(.9)"/>
-      <use href="#o-rosa" transform="translate(180,54) scale(1.25)"/>
-      <use href="#o-hortensia" transform="translate(148,92) scale(1.1)"/>
-      <use href="#o-hortensia" transform="translate(212,94) scale(1.05)"/>
-      <use href="#o-florecita" transform="translate(64,104) scale(1.1)"/>
-      <use href="#o-florecita" transform="translate(296,106)"/>
-      <use href="#o-florecita" transform="translate(180,108) scale(.95)"/>
-      <use href="#o-mariposa" transform="translate(40,36) rotate(-18) scale(.85)"/>
-      <use href="#o-mariposa" transform="translate(322,32) rotate(16) scale(.7)"/>
-      <use href="#o-destello" transform="translate(180,14) scale(.7)" color="#D6B98B"/>
-    </svg>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
   </div>
 </footer>
 </main>

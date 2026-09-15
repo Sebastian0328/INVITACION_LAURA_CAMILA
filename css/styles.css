@@ -41,7 +41,7 @@
 
   /* Tinta — todos los tonos de texto cumplen contraste AA sobre marfil */
   --ink:          #654D4B;   /* títulos y datos              */
-  --ink-soft:     #8A7370;   /* cuerpo de texto              */
+  --ink-soft:     #79615D;   /* cuerpo de texto              */
   --label:        #93594F;   /* antetítulos en versalitas    */
   --rose-ink:     #9C5F57;   /* rosa para texto pequeño      */
   --ink-faint:    #BBA6A2;   /*         solo decorativo              */
@@ -85,11 +85,11 @@ body{
   font-size:16px;
   line-height:1.6;
   color:var(--ink);
-  background-color:var(--ambient);
+  background-color:var(--ivory-warm);
   background-image:
-    radial-gradient(60rem 40rem at 12% 8%,  rgba(248,232,231,.55), transparent 62%),
-    radial-gradient(52rem 38rem at 88% 30%, rgba(239,227,211,.50), transparent 60%),
-    radial-gradient(46rem 34rem at 50% 96%, rgba(212,170,166,.28), transparent 64%);
+    radial-gradient(60rem 40rem at 12% 8%,  rgba(248,232,231,.26), transparent 62%),
+    radial-gradient(52rem 38rem at 88% 30%, rgba(239,227,211,.24), transparent 60%),
+    radial-gradient(46rem 34rem at 50% 96%, rgba(212,170,166,.14), transparent 64%);
   background-attachment:fixed;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -243,9 +243,10 @@ ul,ol{ list-style:none; }
 }
 
 .parents{
-  font-size:clamp(1.875rem,8.5vw,2.375rem);
+  font-size:clamp(1.5rem,7vw,2.375rem);
   color:var(--terracotta);
   line-height:1.35;
+  padding-inline:.5rem;
 }
 .parents .amp{
   display:block;
@@ -338,8 +339,16 @@ ul,ol{ list-style:none; }
 }
 .corner-flora--paper-tl{ top:-1.25rem; left:-1.75rem; }
 .corner-flora--paper-tr{ top:-.5rem; right:-2rem; transform:scaleX(-1); }
-.corner-flora--closing-bl{ bottom:-1.5rem; left:-1.75rem; }
-.corner-flora--closing-br{ bottom:-1.5rem; right:-1.75rem; transform:scaleX(-1); }
+
+/* En el cierre las flores llevan todo el peso visual (ya no hay ramo
+   centrado), así que entran más grandes desde ambas esquinas inferiores. */
+.corner-flora--closing-bl,
+.corner-flora--closing-br{
+  width:clamp(8.5rem,38vw,13rem);
+  opacity:.85;
+}
+.corner-flora--closing-bl{ bottom:-1.75rem; left:-2rem; }
+.corner-flora--closing-br{ bottom:-1.75rem; right:-2rem; transform:scaleX(-1); }
 
 /* Mariposas pequeñas y discretas — nunca más de un par por zona */
 .butterfly{
@@ -398,6 +407,11 @@ ul,ol{ list-style:none; }
 .btn-row{
   display:flex; flex-wrap:wrap; gap:.75rem;
   align-items:center; justify-content:center;
+}
+.btn-row .btn{
+  min-height:2.375rem;
+  padding:.75rem 1.5rem;
+  font-size:.6875rem;
 }
 
 
@@ -560,7 +574,7 @@ ul,ol{ list-style:none; }
   content:''; position:absolute; inset:0; z-index:1;
   background:
     linear-gradient(115deg, transparent 30%, rgba(255,255,255,.4) 47%, transparent 60%),
-    repeating-linear-gradient(115deg, rgba(212,170,166,.022) 0 2px, transparent 2px 9px);
+    repeating-linear-gradient(115deg, rgba(212,170,166,.013) 0 2px, transparent 2px 9px);
   pointer-events:none;
 }
 
@@ -585,6 +599,15 @@ ul,ol{ list-style:none; }
 .section--story{ gap:clamp(1.75rem,6vw,2.5rem); }
 .section--gallery{ gap:.875rem; }
 .section--rsvp{ scroll-margin-top:2rem; }
+
+/* Recepción — un solo bloque compacto: menos salto entre icono, título,
+   divisor, nombre, dirección, hora y botón. */
+.section--venue{
+  gap:.5625rem;
+  padding-bottom:clamp(3.25rem,10vw,4.5rem);
+}
+.section--venue > .medallion{ margin-bottom:0; }
+.section--venue > .btn{ margin-top:.375rem; }
 
 .hero-sentinel{
   position:absolute; top:0; left:0;
@@ -616,6 +639,10 @@ ul,ol{ list-style:none; }
   letter-spacing:.02em;
   color:var(--rose-gold);
   text-shadow:0 3px 24px rgba(188,130,122,.22);
+}
+.photo--intro{
+  width:min(52%,11.5rem);
+  margin-block:.375rem .125rem;
 }
 .section--present .name{
   margin-top:.35rem;
@@ -688,9 +715,19 @@ ul,ol{ list-style:none; }
   justify-self:stretch;
   width:auto;
   margin-inline:calc(var(--pad-x) * -1);
+  margin-block:.25rem;
   border-radius:0;
   border-inline:0;
   outline-width:0;
+}
+/* Vela suave en los bordes superior e inferior — funde la fotografía
+   a sangre con el papel en lugar de cortarla en seco. */
+.photo[data-frame='bleed']::after{
+  content:''; position:absolute; z-index:1; inset:0;
+  background:
+    linear-gradient(to bottom, rgba(255,252,250,.5), transparent 12%),
+    linear-gradient(to top,    rgba(255,252,250,.5), transparent 12%);
+  pointer-events:none;
 }
 
 /* Composición editorial de dos fotografías superpuestas */
@@ -708,12 +745,15 @@ ul,ol{ list-style:none; }
 
 /* ── 10 · Fecha y cuenta regresiva ──────────────────────────────────────── */
 .datecard{
-  display:flex; align-items:center; justify-content:center;
-  gap:clamp(.875rem,4vw,1.375rem);
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  column-gap:clamp(.875rem,4vw,1.375rem);
+  width:min(100%,23rem);
   margin-top:.25rem;
+  margin-inline:auto;
 }
 .datecard__side{
-  flex:none;
   padding:.625rem 0;
   font-family:var(--f-serif);
   font-weight:500;
@@ -725,6 +765,8 @@ ul,ol{ list-style:none; }
   border-bottom:1px solid var(--gold);
   white-space:nowrap;
 }
+.datecard__side:first-of-type{ text-align:right; text-indent:0; }
+.datecard__side:last-of-type{ text-align:left; }
 .datecard__day{
   font-family:var(--f-serif);
   font-weight:400;
@@ -870,13 +912,13 @@ ul,ol{ list-style:none; }
   margin-top:.25rem;
 }
 .dots__dot{
-  width:6px; height:6px; border-radius:50%;
-  background:rgba(212,170,166,.45);
+  width:6px; height:6px; border-radius:999px;
+  background:rgba(173,122,114,.4);
   transition:width .3s var(--ease), background-color .3s var(--ease);
 }
 .dots__dot.is-active{
-  width:20px; border-radius:999px;
-  background:var(--rose-dust);
+  width:22px;
+  background:var(--rose-deep);
 }
 
 
@@ -952,7 +994,7 @@ ul,ol{ list-style:none; }
   color:var(--rose-deep);
   text-shadow:0 3px 18px rgba(188,130,122,.2);
 }
-.bouquet{ width:min(94%,22.5rem); margin-top:.5rem; }
+.closing__inner .rule{ margin-top:.5rem; }
 
 
 /* ── 15 · Controles flotantes ───────────────────────────────────────────── */
@@ -961,7 +1003,7 @@ ul,ol{ list-style:none; }
   top:calc(env(safe-area-inset-top) + .875rem);
   right:calc(env(safe-area-inset-right) + .875rem);
   display:grid; place-items:center;
-  width:2.875rem; height:2.875rem;
+  width:2.25rem; height:2.25rem;
   border-radius:50%;
   color:var(--rose-gold);
   background:rgba(255,252,250,.85);
@@ -973,7 +1015,7 @@ ul,ol{ list-style:none; }
   transition:opacity .5s var(--ease), transform .5s var(--ease);
 }
 .music.is-ready{ opacity:1; transform:none; }
-.music__icon{ width:1.125rem; height:1.125rem; }
+.music__icon{ width:.875rem; height:.875rem; }
 .music__ring{
   position:absolute; inset:-4px;
   border-radius:50%;
@@ -993,7 +1035,7 @@ ul,ol{ list-style:none; }
   position:fixed; z-index:70;
   inset:auto 0 0 0;
   display:flex; justify-content:center;
-  padding:.625rem var(--pad-x) calc(.625rem + env(safe-area-inset-bottom));
+  padding:.5rem var(--pad-x) calc(.5rem + env(safe-area-inset-bottom));
   background:linear-gradient(to top, rgba(253,250,247,.97) 55%, rgba(253,250,247,0));
   transform:translateY(130%);
   transition:transform .55s var(--ease), opacity .4s var(--ease);
@@ -1007,10 +1049,10 @@ ul,ol{ list-style:none; }
 }
 .rsvpbar__btn{
   display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-  min-height:2.875rem;
-  padding:.8125rem 1.875rem;
+  min-height:2.375rem;
+  padding:.625rem 1.625rem;
   border-radius:999px;
-  font-size:.75rem; letter-spacing:.24em; text-indent:.24em;
+  font-size:.6875rem; letter-spacing:.22em; text-indent:.22em;
   text-transform:uppercase; text-decoration:none;
   color:var(--rose-gold);
   background:rgba(255,252,250,.92);
@@ -1066,6 +1108,7 @@ ul,ol{ list-style:none; }
   :root{ --pad-x:1.125rem; }
   .unit__l{ font-size:.5313rem; letter-spacing:.1em; }
   .btn{ letter-spacing:.18em; text-indent:.18em; padding-inline:1.5rem; }
+  .parents{ font-size:clamp(1.3125rem,6.5vw,2rem); }
 }
 
 /* Tablet — la composición se ensancha, no se estira */
@@ -1088,10 +1131,10 @@ ul,ol{ list-style:none; }
 
   body{
     background-image:
-      radial-gradient(48rem 42rem at 6% 12%,  rgba(248,232,231,.62), transparent 58%),
-      radial-gradient(44rem 40rem at 94% 26%, rgba(239,227,211,.55), transparent 56%),
-      radial-gradient(40rem 36rem at 14% 82%, rgba(212,170,166,.32), transparent 60%),
-      radial-gradient(40rem 36rem at 88% 92%, rgba(248,232,231,.42), transparent 60%);
+      radial-gradient(48rem 42rem at 6% 12%,  rgba(248,232,231,.3), transparent 58%),
+      radial-gradient(44rem 40rem at 94% 26%, rgba(239,227,211,.26), transparent 56%),
+      radial-gradient(40rem 36rem at 14% 82%, rgba(212,170,166,.16), transparent 60%),
+      radial-gradient(40rem 36rem at 88% 92%, rgba(248,232,231,.2),  transparent 60%);
   }
 
   .paper{ box-shadow:0 0 110px -20px rgba(120,70,70,.16); }
