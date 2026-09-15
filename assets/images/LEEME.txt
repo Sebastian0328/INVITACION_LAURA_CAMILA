@@ -1,0 +1,25 @@
+Fotografías de la invitación. Nombres esperados (ver js/config.js):
+
+    hero.webp          Portada — vertical, que luzcan el cabello y la tiara
+    foto-01.webp       Retrato vertical (marco de arco)
+    foto-02.webp       Detalle — peinado o tiara (marco ovalado)
+    foto-03.webp       Plano medio (marco rectangular)
+    foto-04.webp       Foto ancha a sangre
+    galeria-01.webp    Carrusel
+    galeria-02.webp    Carrusel
+    galeria-03.webp    Carrusel
+    galeria-04.webp    Carrusel
+
+Recomendaciones:
+  · Formato WebP (o AVIF). Calidad 80 basta.
+  · hero.webp  ->  1200 x 1600 px aprox.  (vertical 3:4)
+  · el resto   ->  1000 px de lado mayor.
+  · Menos de 300 KB por imagen.
+
+Puedes convertir en https://squoosh.app (gratis, sin instalar nada).
+
+El encuadre de cada foto se ajusta con `position` en js/config.js
+(por ejemplo '50% 25%' sube el encuadre si se corta la cara).
+
+Mientras no existan, la invitación muestra un marco de espera elegante
+en lugar de una imagen rota.

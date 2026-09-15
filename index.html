@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Mis XV Años · Laura Camila</title>
+<meta name="description" content="Una noche muy especial está por comenzar. Acompáñame a celebrar mis XV años.">
+<meta name="author" content="Laura Camila Trujillo Acosta">
+<meta name="theme-color" content="#FBEFF1">
+<meta name="color-scheme" content="light">
+
+<!-- Open Graph · pensado para compartir por WhatsApp.
+     Al publicar, cambia las URLs de og:image / twitter:image por su versión
+     ABSOLUTA (p. ej. https://mis-xv-laura.vercel.app/og-image.jpg). -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Mis XV Años · Laura Camila">
+<meta property="og:title" content="Mis XV Años · Laura Camila">
+<meta property="og:description" content="Una noche muy especial está por comenzar. Acompáñame a celebrar mis XV años.">
+<meta property="og:image" content="./og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Invitación a los XV años de Laura Camila Trujillo Acosta">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mis XV Años · Laura Camila">
+<meta name="twitter:description" content="Una noche muy especial está por comenzar. Acompáñame a celebrar mis XV años.">
+<meta name="twitter:image" content="./og-image.jpg">
+
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap">
+
+<link rel="stylesheet" href="./css/styles.css">
+<script src="./js/config.js"></script>
+<script src="./js/app.js" defer></script>
+</head>
+
+<body class="is-locked">
+
+<a class="skip-link" href="#invitacion">Saltar a la invitación</a>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     Biblioteca de ornamentos SVG — se referencian con <use href="#id">
+     ═══════════════════════════════════════════════════════════════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0"><defs>
+
+  <g id="o-rosa">
+    <circle r="26" fill="#F1C2CE"/>
+    <path d="M0,-26A26,26 0 0 1 26,0A20,20 0 0 0 0,-20Z" fill="#EAAEBF"/>
+    <path d="M-26,0A26,26 0 0 1 0,26A20,20 0 0 0 -20,0Z" fill="#EAAEBF"/>
+    <circle r="17" fill="#EDB8C8"/>
+    <path d="M0,-17A17,17 0 0 1 17,0A12,12 0 0 0 0,-12Z" fill="#E4A1B5"/>
+    <path d="M-17,0A17,17 0 0 1 0,17A12,12 0 0 0 -12,0Z" fill="#E4A1B5"/>
+    <circle r="9.5" fill="#E29DB1"/>
+    <path d="M-9.5,0A9.5,9.5 0 0 1 9.5,0A6,6 0 0 0 -6,0Z" fill="#D98DA3"/>
+    <circle r="4" fill="#CE7F96"/>
+  </g>
+
+  <g id="o-rosa-clara">
+    <circle r="22" fill="#FBF3F0"/>
+    <path d="M0,-22A22,22 0 0 1 22,0A17,17 0 0 0 0,-17Z" fill="#F2E2E0"/>
+    <path d="M-22,0A22,22 0 0 1 0,22A17,17 0 0 0 -17,0Z" fill="#F2E2E0"/>
+    <circle r="13" fill="#F6EBE9"/>
+    <path d="M0,-13A13,13 0 0 1 13,0A9,9 0 0 0 0,-9Z" fill="#EBD7D5"/>
+    <circle r="6.5" fill="#E9D3D1"/>
+    <circle r="2.8" fill="#DFBE99"/>
+  </g>
+
+  <g id="o-peonia">
+    <g fill="#F4D1DB"><ellipse rx="13" ry="24"/><ellipse rx="13" ry="24" transform="rotate(45)"/><ellipse rx="13" ry="24" transform="rotate(90)"/><ellipse rx="13" ry="24" transform="rotate(135)"/></g>
+    <g fill="#EEBDCC"><ellipse rx="10" ry="18" transform="rotate(22)"/><ellipse rx="10" ry="18" transform="rotate(67)"/><ellipse rx="10" ry="18" transform="rotate(112)"/><ellipse rx="10" ry="18" transform="rotate(157)"/></g>
+    <circle r="8" fill="#E8AABC"/><circle r="3.4" fill="#F2E0BE"/>
+  </g>
+
+  <g id="o-hortensia">
+    <circle cx="0" cy="-10" r="7" fill="#F1D1DB"/><circle cx="9" cy="-3" r="7" fill="#EDC6D2"/>
+    <circle cx="6" cy="8" r="7" fill="#F1D1DB"/><circle cx="-6" cy="8" r="7" fill="#EDC6D2"/>
+    <circle cx="-9" cy="-3" r="7" fill="#F1D1DB"/><circle r="6" fill="#F5DDE5"/><circle r="2.2" fill="#E5C18B"/>
+  </g>
+
+  <g id="o-florecita">
+    <g fill="#F7E0E6"><ellipse rx="4.6" ry="8"/><ellipse rx="4.6" ry="8" transform="rotate(72)"/><ellipse rx="4.6" ry="8" transform="rotate(144)"/><ellipse rx="4.6" ry="8" transform="rotate(216)"/><ellipse rx="4.6" ry="8" transform="rotate(288)"/></g>
+    <circle r="2.6" fill="#E5C18B"/>
+  </g>
+
+  <path id="o-hoja" d="M0,0C14,-10 30,-8 40,4C28,14 12,13 0,0Z" fill="#B4C4AE"/>
+
+  <g id="o-eucalipto">
+    <path d="M0,0C16,-4 34,-2 52,2" stroke="#B4C4AE" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <ellipse cx="12" cy="-7" rx="7" ry="5.5" fill="#BFCDB8"/><ellipse cx="26" cy="-9" rx="7.5" ry="6" fill="#B4C4AE"/>
+    <ellipse cx="41" cy="-6" rx="6.5" ry="5" fill="#C4D0BD"/><ellipse cx="17" cy="9" rx="7" ry="5.5" fill="#B4C4AE"/>
+    <ellipse cx="33" cy="10" rx="6.5" ry="5" fill="#C4D0BD"/>
+  </g>
+
+  <path id="o-destello" d="M0,-7C.9,-2 2,-.9 7,0C2,.9 .9,2 0,7C-.9,2 -2,.9 -7,0C-2,-.9 -.9,-2 0,-7Z" fill="currentColor"/>
+
+  <g id="o-mariposa">
+    <path d="M0,0C-3,-10 -16,-15 -20,-8C-23,-2 -12,3 0,0Z" fill="#EBBFC6" opacity=".9"/>
+    <path d="M0,0C3,-10 16,-15 20,-8C23,-2 12,3 0,0Z" fill="#EBBFC6" opacity=".9"/>
+    <path d="M0,0C-3,7 -13,12 -16,6C-18,1 -9,-2 0,0Z" fill="#E0A9B4" opacity=".85"/>
+    <path d="M0,0C3,7 13,12 16,6C18,1 9,-2 0,0Z" fill="#E0A9B4" opacity=".85"/>
+    <path d="M0,-4V6" stroke="#C08A7C" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M0,-4C-1,-8 -3,-9 -5,-10M0,-4C1,-8 3,-9 5,-10" stroke="#C08A7C" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <g id="o-tiara">
+    <path d="M6,28Q14,12 22,24Q29,6 36,20Q43,6 50,24Q58,12 66,28Z" fill="none" stroke="#C08A7C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="36" cy="7" r="2.3" fill="#E0CBA4"/><circle cx="14" cy="14" r="1.6" fill="#E0CBA4"/><circle cx="58" cy="14" r="1.6" fill="#E0CBA4"/>
+  </g>
+
+  <!-- Iconografía de interfaz -->
+  <g id="i-pin" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4.2-4.1 7-7.3 7-10.6A7 7 0 1 0 5 10.4C5 13.7 7.8 16.9 12 21Z"/><circle cx="12" cy="10.3" r="2.6"/></g>
+  <g id="i-whatsapp" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"/><path d="M8.6 9.2c.3-.8.9-.9 1.4-.7l.9 1.5c.2.4-.2.9-.5 1.2.5 1.2 1.5 2.2 2.7 2.7.3-.3.8-.7 1.2-.5l1.5.9c.2.5.1 1.1-.7 1.4-2.7 1-7.5-3.8-6.5-6.5Z"/></g>
+  <g id="i-calendario" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></g>
+  <g id="i-descarga" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14"/></g>
+  <g id="i-regalo" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M3 7h18v3H3zM12 7v13M12 7c-1.8 0-4.5-.8-4.5-2.7C7.5 2.6 10.6 2.4 12 7Zm0 0c1.8 0 4.5-.8 4.5-2.7C16.5 2.6 13.4 2.4 12 7Z"/></g>
+  <g id="i-vestido" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3 12 5.6 14.5 3M9.5 3 8 6l2.4 2.4M14.5 3 16 6l-2.4 2.4M10.4 8.4h3.2l3.4 9.4c.3.9-.3 1.9-1.2 2.2-2.4.6-5 .6-7.4 0-.9-.3-1.5-1.3-1.2-2.2Z"/></g>
+  <g id="i-reloj" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 1.8"/></g>
+  <path id="i-play" d="M8 5.2v13.6L19 12z" fill="currentColor"/>
+  <path id="i-pause" d="M7.5 5h3v14h-3zM13.5 5h3v14h-3z" fill="currentColor"/>
+</defs></svg>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     PORTADA
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="opening" id="portada">
+  <div class="opening__stage">
+    <div class="opening__window">
+      <figure class="opening__photo photo" data-photo="hero" data-frame="arco"></figure>
+      <div class="opening__scrim" aria-hidden="true"></div>
+    </div>
+
+    <svg class="opening__flora opening__flora--tl" viewBox="0 0 150 150" aria-hidden="true">
+      <use href="#o-hoja" transform="translate(24,88) rotate(38) scale(1.05)"/>
+      <use href="#o-eucalipto" transform="translate(14,46) rotate(18)"/>
+      <use href="#o-rosa" transform="translate(38,42) scale(.95)"/>
+      <use href="#o-hortensia" transform="translate(88,62) scale(1.05)"/>
+      <use href="#o-florecita" transform="translate(62,104)"/>
+    </svg>
+    <svg class="opening__flora opening__flora--br" viewBox="0 0 150 150" aria-hidden="true">
+      <use href="#o-hoja" transform="translate(24,88) rotate(38) scale(1.05)"/>
+      <use href="#o-peonia" transform="translate(42,46) scale(.9)"/>
+      <use href="#o-rosa-clara" transform="translate(94,72) scale(.85)"/>
+      <use href="#o-florecita" transform="translate(66,108) scale(1.1)"/>
+    </svg>
+
+    <div class="opening__content">
+      <p class="eyebrow eyebrow--light">Mis XV Años</p>
+      <svg class="tiara" viewBox="0 0 72 34" aria-hidden="true"><use href="#o-tiara"/></svg>
+      <h1 class="opening__name script" data-bind="displayName">Laura Camila</h1>
+      <div class="rule rule--light"><span></span><i class="pearl"></i><span></span></div>
+      <button class="btn btn--lg" type="button" id="btn-abrir">Abrir invitación</button>
+    </div>
+
+    <div class="sparks" data-sparks="6" aria-hidden="true"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     INVITACIÓN
+     ═══════════════════════════════════════════════════════════════════ -->
+<main class="invitation" id="invitacion" tabindex="-1">
+<div class="paper">
+
+  <span class="hero-sentinel" id="hero-sentinel" aria-hidden="true"></span>
+
+  <!-- ── 2 · Mensaje ────────────────────────────────────────────────── -->
+  <section class="section section--intro" aria-labelledby="t-mensaje">
+    <h2 class="sr-only" id="t-mensaje">Mensaje de bienvenida</h2>
+    <svg class="flourish reveal" viewBox="0 0 280 54" aria-hidden="true">
+      <use href="#o-hoja" transform="translate(74,28) rotate(195) scale(.75)"/>
+      <use href="#o-hoja" transform="translate(206,28) rotate(-15) scale(.75)"/>
+      <use href="#o-florecita" transform="translate(102,26)"/>
+      <use href="#o-rosa" transform="translate(140,24) scale(.62)"/>
+      <use href="#o-florecita" transform="translate(178,26)"/>
+      <use href="#o-destello" transform="translate(56,18) scale(.7)" color="#D6B98B"/>
+      <use href="#o-destello" transform="translate(224,18) scale(.7)" color="#D6B98B"/>
+    </svg>
+    <p class="quote reveal" data-bind="copy.quote"></p>
+  </section>
+
+  <!-- ── 3 · Presentación ───────────────────────────────────────────── -->
+  <section class="section section--present" aria-labelledby="t-presentacion">
+    <div class="lockup reveal" aria-hidden="true">
+      <span class="lockup__mis">mis</span>
+      <span class="lockup__xv">XV</span>
+      <span class="lockup__anios">años</span>
+    </div>
+    <h2 class="sr-only" id="t-presentacion">Mis XV años</h2>
+    <p class="name script reveal" data-bind="displayName"></p>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
+  </section>
+
+  <!-- ── 4 · Padres ─────────────────────────────────────────────────── -->
+  <section class="section section--parents" aria-labelledby="t-padres">
+    <p class="body-text reveal" data-bind="copy.parentsIntro"></p>
+    <h2 class="eyebrow reveal" id="t-padres">Con la compañía de mis padres</h2>
+    <p class="parents script reveal">
+      <span data-bind="parents.father" data-pending="Nombre del padre"></span>
+      <i class="amp">&amp;</i>
+      <span data-bind="parents.mother" data-pending="Nombre de la madre"></span>
+    </p>
+    <div class="pearls reveal"><i class="pearl pearl--sm"></i><i class="pearl"></i><i class="pearl pearl--sm"></i></div>
+  </section>
+
+  <!-- ── 5 · Fecha ──────────────────────────────────────────────────── -->
+  <section class="section section--date" aria-labelledby="t-fecha">
+    <h2 class="sr-only" id="t-fecha">Fecha del evento</h2>
+    <p class="eyebrow reveal" data-date="weekday"></p>
+    <div class="datecard reveal" data-date-card hidden>
+      <span class="datecard__side" data-date="month"></span>
+      <span class="datecard__day" data-date="day"></span>
+      <span class="datecard__side" data-date="time"></span>
+    </div>
+    <p class="datecard__year reveal" data-date="year"></p>
+    <p class="date-pending reveal" data-date-pending hidden>Fecha por confirmar</p>
+  </section>
+
+  <!-- ── 6 · Cuenta regresiva ───────────────────────────────────────── -->
+  <section class="section section--count" aria-labelledby="t-countdown" data-countdown hidden>
+    <h2 class="title-sm reveal" id="t-countdown">Faltan</h2>
+    <ul class="countdown reveal" role="list">
+      <li class="unit"><span class="unit__n" data-cd="days">00</span><span class="unit__l">Días</span></li>
+      <li class="unit"><span class="unit__n" data-cd="hours">00</span><span class="unit__l">Horas</span></li>
+      <li class="unit"><span class="unit__n" data-cd="minutes">00</span><span class="unit__l">Min</span></li>
+      <li class="unit"><span class="unit__n" data-cd="seconds">00</span><span class="unit__l">Seg</span></li>
+    </ul>
+    <p class="bigday script" data-cd-today hidden>¡Hoy es el gran día!</p>
+  </section>
+
+  <!-- ── 7 · Historia fotográfica ───────────────────────────────────── -->
+  <section class="section section--story" aria-label="Galería editorial">
+    <figure class="photo photo--arch reveal" data-photo="photo1" data-frame="arco"></figure>
+
+    <div class="duo">
+      <figure class="photo photo--duoA reveal" data-photo="photo2" data-frame="ovalo"></figure>
+      <figure class="photo photo--duoB reveal" data-photo="photo3" data-frame="rect"></figure>
+    </div>
+
+    <svg class="flourish flourish--sm reveal" viewBox="0 0 280 46" aria-hidden="true">
+      <use href="#o-hoja" transform="translate(86,24) rotate(200) scale(.65)"/>
+      <use href="#o-hoja" transform="translate(194,24) rotate(-20) scale(.65)"/>
+      <use href="#o-florecita" transform="translate(116,22) scale(.9)"/>
+      <use href="#o-peonia" transform="translate(140,20) scale(.5)"/>
+      <use href="#o-florecita" transform="translate(164,22) scale(.9)"/>
+    </svg>
+
+    <figure class="photo photo--bleed reveal" data-photo="photo4" data-frame="bleed"></figure>
+  </section>
+
+  <!-- ── 8 · Lugar ──────────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="t-lugar">
+    <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg></span>
+    <h2 class="title reveal" id="t-lugar">Recepción</h2>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
+    <p class="venue reveal" data-bind="venue.name" data-pending="Lugar por confirmar"></p>
+    <p class="meta reveal" data-bind="venue.address" data-pending="Dirección por confirmar"></p>
+    <p class="meta reveal" data-date="timeLong"></p>
+    <a class="btn reveal" id="btn-mapa" href="#" target="_blank" rel="noopener noreferrer">
+      <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Ver ubicación
+    </a>
+    <p class="note reveal" id="lugar-nota" hidden></p>
+  </section>
+
+  <!-- ── 9 · Itinerario ─────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="t-itinerario">
+    <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-reloj"/></svg></span>
+    <h2 class="title reveal" id="t-itinerario">Itinerario</h2>
+    <div class="pearls reveal"><i class="pearl pearl--sm"></i><i class="pearl"></i><i class="pearl pearl--sm"></i></div>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <!-- ── 10 · Galería deslizable ────────────────────────────────────── -->
+  <section class="section section--gallery" aria-labelledby="t-galeria">
+    <h2 class="title reveal" id="t-galeria">Recuerdos</h2>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
+    <p class="hint-swipe reveal">Desliza para ver más</p>
+    <div class="carousel" id="carousel" tabindex="0" role="group" aria-label="Galería de fotografías. Desliza horizontalmente o usa las flechas del teclado."></div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </section>
+
+  <!-- ── 11 · Código de vestimenta ──────────────────────────────────── -->
+  <section class="section" aria-labelledby="t-vestimenta">
+    <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-vestido"/></svg></span>
+    <h2 class="title reveal" id="t-vestimenta">Código de vestimenta</h2>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
+    <p class="venue reveal" data-bind="dressCode.type"></p>
+    <p class="body-text reveal" data-bind="dressCode.note"></p>
+    <ul class="swatches reveal" id="swatches" role="list"></ul>
+  </section>
+
+  <!-- ── 12 · Regalos ───────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="t-regalos">
+    <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-regalo"/></svg></span>
+    <h2 class="title reveal" id="t-regalos">Sugerencia de regalos</h2>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
+    <p class="quote quote--sm reveal" data-bind="copy.giftsIntro"></p>
+    <p class="venue venue--wide reveal" data-bind="gifts.title"></p>
+    <figure class="qr reveal" id="qr" hidden></figure>
+  </section>
+
+  <!-- ── 13 · Confirmar asistencia ──────────────────────────────────── -->
+  <section class="section section--rsvp" id="rsvp" aria-labelledby="t-rsvp">
+    <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+    <h2 class="title reveal" id="t-rsvp">Confirmar asistencia</h2>
+    <div class="pearls reveal"><i class="pearl pearl--sm"></i><i class="pearl"></i><i class="pearl pearl--sm"></i></div>
+    <p class="quote quote--sm reveal" data-bind="copy.rsvpIntro"></p>
+    <a class="btn btn--lg reveal" id="btn-rsvp" href="#" target="_blank" rel="noopener noreferrer">
+      <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>Confirmar asistencia
+    </a>
+    <p class="note reveal" id="rsvp-nota" hidden></p>
+  </section>
+
+  <!-- ── 15 · Calendario ────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="t-calendario">
+    <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendario"/></svg></span>
+    <h2 class="title reveal" id="t-calendario">Agregar a mi calendario</h2>
+    <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
+    <p class="body-text reveal">Guarda la fecha para que no se te pase.</p>
+    <div class="btn-row reveal">
+      <a class="btn btn--ghost" id="btn-gcal" href="#" target="_blank" rel="noopener noreferrer">
+        <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendario"/></svg>Google Calendar
+      </a>
+      <button class="btn btn--ghost" type="button" id="btn-ics">
+        <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-descarga"/></svg>Descargar .ics
+      </button>
+    </div>
+    <p class="note reveal" id="cal-nota" hidden>Disponible en cuanto se confirme la fecha.</p>
+  </section>
+
+</div><!-- /.paper -->
+
+<!-- ── 16 · Cierre ──────────────────────────────────────────────────── -->
+<footer class="closing">
+  <div class="closing__inner">
+    <p class="title-sm reveal" data-bind="copy.closing"></p>
+    <p class="signature script reveal" data-bind="copy.signature"></p>
+    <svg class="bouquet reveal" viewBox="0 0 360 132" aria-hidden="true">
+      <use href="#o-hoja" transform="translate(58,66) rotate(-165) scale(1.2)"/>
+      <use href="#o-hoja" transform="translate(300,68) rotate(-15) scale(1.2)"/>
+      <use href="#o-eucalipto" transform="translate(46,52) rotate(-150) scale(.9)"/>
+      <use href="#o-eucalipto" transform="translate(314,54) rotate(-30) scale(.9)"/>
+      <use href="#o-hoja" transform="translate(110,36) rotate(-125) scale(.9)"/>
+      <use href="#o-hoja" transform="translate(248,38) rotate(-55) scale(.9)"/>
+      <use href="#o-peonia" transform="translate(120,64) scale(1.05)"/>
+      <use href="#o-peonia" transform="translate(240,66) scale(.95)"/>
+      <use href="#o-rosa-clara" transform="translate(88,84) scale(.95)"/>
+      <use href="#o-rosa-clara" transform="translate(272,86) scale(.9)"/>
+      <use href="#o-rosa" transform="translate(180,54) scale(1.25)"/>
+      <use href="#o-hortensia" transform="translate(148,92) scale(1.1)"/>
+      <use href="#o-hortensia" transform="translate(212,94) scale(1.05)"/>
+      <use href="#o-florecita" transform="translate(64,104) scale(1.1)"/>
+      <use href="#o-florecita" transform="translate(296,106)"/>
+      <use href="#o-florecita" transform="translate(180,108) scale(.95)"/>
+      <use href="#o-mariposa" transform="translate(40,36) rotate(-18) scale(.85)"/>
+      <use href="#o-mariposa" transform="translate(322,32) rotate(16) scale(.7)"/>
+      <use href="#o-destello" transform="translate(180,14) scale(.7)" color="#D6B98B"/>
+    </svg>
+  </div>
+</footer>
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     Controles flotantes
+     ═══════════════════════════════════════════════════════════════════ -->
+<button class="music" type="button" id="btn-musica" aria-pressed="false" aria-label="Reproducir música" hidden>
+  <span class="music__ring" aria-hidden="true"></span>
+  <svg class="music__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-play"/></svg>
+</button>
+
+<div class="rsvpbar" id="rsvpbar" hidden>
+  <a class="rsvpbar__btn" id="btn-rsvp-bar" href="#rsvp">
+    <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg>Confirmar asistencia
+  </a>
+</div>
+
+<audio id="audio" preload="none" loop></audio>
+
+</body>
+</html>

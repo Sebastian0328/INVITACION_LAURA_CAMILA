@@ -1,0 +1,13 @@
+Coloca aquí la canción de la invitación con el nombre exacto:
+
+    cancion.mp3
+
+Recomendaciones:
+  · MP3 a 128 kbps mono o 160 kbps estéreo — suficiente para móvil.
+  · Menos de 3 MB para que cargue rápido con datos móviles.
+  · Recórtala a 1–2 minutos: la pista se repite en bucle.
+
+Si el archivo no existe, el control de música se oculta solo
+y la invitación sigue funcionando con normalidad.
+
+La ruta se configura en js/config.js -> music.src

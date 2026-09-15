@@ -1,0 +1,7 @@
+.vercel
+.DS_Store
+Thumbs.db
+
+# Fotos originales sin comprimir (se usan las .webp optimizadas en su lugar)
+assets/images/[0-9]*.jpeg
+assets/images/[0-9]*.jpg
