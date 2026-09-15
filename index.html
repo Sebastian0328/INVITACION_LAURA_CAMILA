@@ -7,7 +7,7 @@
 <title>Mis XV Años · Laura Camila</title>
 <meta name="description" content="Una noche muy especial está por comenzar. Acompáñame a celebrar mis XV años.">
 <meta name="author" content="Laura Camila Trujillo Acosta">
-<meta name="theme-color" content="#FBEFF1">
+<meta name="theme-color" content="#FFFCFA">
 <meta name="color-scheme" content="light">
 
 <!-- Open Graph · pensado para compartir por WhatsApp. -->
@@ -155,6 +155,10 @@
       <button class="btn btn--lg" type="button" id="btn-abrir">Abrir invitación</button>
     </div>
 
+    <svg class="butterfly butterfly--hero" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+      <use href="#o-mariposa" transform="translate(20,16) scale(1.35)"/>
+    </svg>
+
     <div class="sparks" data-sparks="6" aria-hidden="true"></div>
   </div>
 </div>
@@ -167,6 +171,19 @@
 <div class="paper">
 
   <span class="hero-sentinel" id="hero-sentinel" aria-hidden="true"></span>
+
+  <svg class="corner-flora corner-flora--paper-tl" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <use href="#o-hoja" transform="translate(20,80) rotate(30) scale(1.05)"/>
+    <use href="#o-eucalipto" transform="translate(10,40) rotate(14)"/>
+    <use href="#o-rosa-clara" transform="translate(34,36) scale(.85)"/>
+    <use href="#o-hortensia" transform="translate(80,58) scale(.95)"/>
+    <use href="#o-florecita" transform="translate(58,98) scale(.9)"/>
+  </svg>
+  <svg class="corner-flora corner-flora--paper-tr" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <use href="#o-hoja" transform="translate(20,80) rotate(30) scale(.9)"/>
+    <use href="#o-peonia" transform="translate(38,40) scale(.75)"/>
+    <use href="#o-florecita" transform="translate(64,92) scale(.85)"/>
+  </svg>
 
   <!-- ── 2 · Mensaje ────────────────────────────────────────────────── -->
   <section class="section section--intro" aria-labelledby="t-mensaje">
@@ -185,6 +202,9 @@
 
   <!-- ── 3 · Presentación ───────────────────────────────────────────── -->
   <section class="section section--present" aria-labelledby="t-presentacion">
+    <svg class="butterfly butterfly--present" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+      <use href="#o-mariposa" transform="translate(20,16)"/>
+    </svg>
     <div class="lockup reveal" aria-hidden="true">
       <span class="lockup__mis">mis</span>
       <span class="lockup__xv">XV</span>
@@ -299,12 +319,15 @@
     <h2 class="title reveal" id="t-regalos">Sugerencia de regalos</h2>
     <div class="rule reveal"><span></span><i class="pearl"></i><span></span></div>
     <p class="quote quote--sm reveal" data-bind="copy.giftsIntro"></p>
-    <p class="venue venue--wide reveal" data-bind="gifts.title"></p>
+    <p class="gift-title script reveal" data-bind="gifts.title"></p>
     <figure class="qr reveal" id="qr" hidden></figure>
   </section>
 
   <!-- ── 13 · Confirmar asistencia ──────────────────────────────────── -->
   <section class="section section--rsvp" id="rsvp" aria-labelledby="t-rsvp">
+    <svg class="butterfly butterfly--sm butterfly--rsvp" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+      <use href="#o-mariposa" transform="translate(20,16)"/>
+    </svg>
     <span class="medallion reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
     <h2 class="title reveal" id="t-rsvp">Confirmar asistencia</h2>
     <div class="pearls reveal"><i class="pearl pearl--sm"></i><i class="pearl"></i><i class="pearl pearl--sm"></i></div>
@@ -336,8 +359,23 @@
 
 <!-- ── 16 · Cierre ──────────────────────────────────────────────────── -->
 <footer class="closing">
+  <svg class="corner-flora corner-flora--closing-bl" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <use href="#o-hoja" transform="translate(24,70) rotate(-40) scale(1.05)"/>
+    <use href="#o-eucalipto" transform="translate(12,96) rotate(-16)"/>
+    <use href="#o-rosa" transform="translate(40,104) scale(.9)"/>
+    <use href="#o-florecita" transform="translate(70,64) scale(.85)"/>
+  </svg>
+  <svg class="corner-flora corner-flora--closing-br" viewBox="0 0 150 150" aria-hidden="true" focusable="false">
+    <use href="#o-hoja" transform="translate(24,70) rotate(-40) scale(.95)"/>
+    <use href="#o-peonia" transform="translate(42,100) scale(.8)"/>
+    <use href="#o-hortensia" transform="translate(76,66) scale(.85)"/>
+  </svg>
+
   <div class="closing__inner">
     <p class="title-sm reveal" data-bind="copy.closing"></p>
+    <svg class="butterfly butterfly--sm butterfly--closing" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+      <use href="#o-mariposa" transform="translate(20,16)"/>
+    </svg>
     <p class="signature script reveal" data-bind="copy.signature"></p>
     <svg class="bouquet reveal" viewBox="0 0 360 132" aria-hidden="true">
       <use href="#o-hoja" transform="translate(58,66) rotate(-165) scale(1.2)"/>
