@@ -370,7 +370,7 @@ ul,ol{ list-style:none; }
 
 
 /* ── 6 · Botones ────────────────────────────────────────────────────────── */
-/* Outline rose gold — nunca relleno sólido; se siente a papelería impresa */
+/* Rellenos rosa empolvado / rose gold — elegantes, nunca saturados */
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   gap:.625rem;
@@ -382,25 +382,32 @@ ul,ol{ list-style:none; }
   letter-spacing:.26em; text-indent:.26em;
   text-transform:uppercase;
   text-decoration:none;
-  color:var(--rose-gold);
-  background:transparent;
-  border:1px solid rgba(188,130,122,.55);
-  box-shadow:none;
+  color:var(--ivory-warm);
+  background:linear-gradient(135deg, var(--rose-gold), var(--rose-dust));
+  border:1px solid rgba(255,252,250,.22);
+  box-shadow:0 12px 26px -16px rgba(120,70,70,.5), inset 0 1px 0 rgba(255,255,255,.22);
   position:relative;
-  transition:background-color .25s var(--ease), border-color .25s var(--ease), transform .22s var(--ease);
+  transition:background .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease), transform .22s var(--ease);
 }
 .btn:active{ transform:scale(.975); }
-.btn:hover{ background-color:rgba(188,130,122,.07); border-color:rgba(188,130,122,.8); }
+.btn:hover{
+  background:linear-gradient(135deg, var(--rose-deep), var(--rose-gold));
+  border-color:rgba(255,252,250,.32);
+  box-shadow:0 14px 30px -16px rgba(120,70,70,.58), inset 0 1px 0 rgba(255,255,255,.26);
+}
 
 .btn--lg{ padding:1.0625rem 2.25rem; font-size:.7813rem; }
 
 .btn--ghost{
-  color:var(--rose-gold);
-  background:transparent;
-  border:1px solid rgba(188,130,122,.5);
-  box-shadow:none;
+  color:var(--ivory-warm);
+  background:linear-gradient(135deg, var(--rose-dust), var(--rose-gold));
+  border:1px solid rgba(255,252,250,.2);
+  box-shadow:0 10px 22px -16px rgba(120,70,70,.45), inset 0 1px 0 rgba(255,255,255,.2);
 }
-.btn--ghost:hover{ background-color:rgba(188,130,122,.07); }
+.btn--ghost:hover{
+  background:linear-gradient(135deg, var(--rose-gold), var(--rose-deep));
+  border-color:rgba(255,252,250,.3);
+}
 
 .btn__i{ width:1rem; height:1rem; flex:none; margin-right:-.24em; }
 
@@ -420,10 +427,10 @@ ul,ol{ list-style:none; }
   position:fixed; inset:0; z-index:100;
   display:grid; place-items:stretch;
   padding:
-    calc(env(safe-area-inset-top) + 1.375rem)
-    calc(env(safe-area-inset-right) + 1.375rem)
-    calc(env(safe-area-inset-bottom) + 1.375rem)
-    calc(env(safe-area-inset-left) + 1.375rem);
+    calc(env(safe-area-inset-top) + 1rem)
+    calc(env(safe-area-inset-right) + .75rem)
+    calc(env(safe-area-inset-bottom) + 1rem)
+    calc(env(safe-area-inset-left) + .75rem);
   background:
     radial-gradient(70% 50% at 50% 0%, rgba(248,232,231,.9), transparent 70%),
     var(--ambient);
@@ -438,19 +445,20 @@ ul,ol{ list-style:none; }
 
 .opening__stage{
   position:relative;
-  width:min(100%,32rem);
+  width:min(100%,34rem);
   height:100%;
   margin-inline:auto;
-  --arch:clamp(10rem,42vw,14rem);
+  --arch:clamp(11rem,46vw,15rem);
 }
 
-/* La ventana en arco recorta la fotografía; los adornos quedan fuera */
+/* La ventana en arco alto recorta la fotografía; los adornos quedan fuera */
 .opening__window{
   position:absolute; inset:0;
   overflow:hidden;
-  border-radius:var(--arch) var(--arch) 1.25rem 1.25rem;
+  border-radius:var(--arch) var(--arch) .75rem .75rem / 38% 38% 2% 2%;
   background:linear-gradient(165deg,#F8E7EB,#F2D6DE 55%,#EDCAD5);
-  box-shadow:0 26px 70px -24px rgba(140,90,102,.55);
+  border:1px solid rgba(188,130,122,.5);
+  box-shadow:0 18px 46px -26px rgba(140,90,102,.4);
   isolation:isolate;
 }
 /* Filete claro interior */
@@ -509,16 +517,7 @@ ul,ol{ list-style:none; }
 .opening .tiara path{ stroke:#FFE9E0; }
 .opening .rule{ width:min(100%,11rem); }
 .opening .pearl{ box-shadow:0 1px 4px rgba(60,30,38,.5); }
-/* Sobre la fotografía el outline se aclara para seguir siendo legible,
-   pero conserva el mismo lenguaje: fondo transparente, nunca relleno. */
-.opening .btn{
-  margin-top:.375rem;
-  color:#FFF6F1;
-  border-color:rgba(255,246,241,.6);
-}
-.opening .btn:hover{ background-color:rgba(255,246,241,.12); border-color:rgba(255,246,241,.85); }
-.opening--empty .btn{ color:var(--rose-gold); border-color:rgba(188,130,122,.55); }
-.opening--empty .btn:hover{ background-color:rgba(188,130,122,.07); border-color:rgba(188,130,122,.8); }
+.opening .btn{ margin-top:.375rem; }
 
 /* Portada sin fotografía todavía — versión clara, nunca un velo oscuro vacío */
 .opening--empty .opening__scrim{
@@ -839,7 +838,7 @@ ul,ol{ list-style:none; }
 /* ── 11 · Itinerario ────────────────────────────────────────────────────── */
 .timeline{
   position:relative;
-  width:min(100%,19.5rem);
+  width:min(100%,21.5rem);
   margin-top:1rem;
   padding-left:2.125rem;
   text-align:left;
@@ -850,11 +849,11 @@ ul,ol{ list-style:none; }
   width:1px;
   background:linear-gradient(180deg,transparent,var(--gold) 12%,var(--gold) 88%,transparent);
 }
-.timeline__item{ position:relative; padding-bottom:1.5rem; }
+.timeline__item{ position:relative; padding-bottom:1.875rem; }
 .timeline__item:last-child{ padding-bottom:0; }
 .timeline__item::before{
   content:''; position:absolute;
-  left:-1.9375rem; top:.375rem;
+  left:-1.9375rem; top:.4375rem;
   width:11px; height:11px; border-radius:50%;
   background:radial-gradient(circle at 32% 28%, #fff 0 26%, #F3DEC0 55%, var(--gold) 100%);
   box-shadow:0 0 0 3px var(--ivory), 0 0 0 4px rgba(188,130,122,.45);
@@ -866,16 +865,18 @@ ul,ol{ list-style:none; }
 .timeline__time{
   font-family:var(--f-serif);
   font-weight:600;
-  font-size:.9375rem;
-  letter-spacing:.1em;
+  font-size:1.125rem;
+  line-height:1.3;
+  letter-spacing:.08em;
   color:var(--rose-ink);
 }
 .timeline__title{
-  font-weight:300;
-  font-size:.875rem;
-  letter-spacing:.05em;
+  font-weight:400;
+  font-size:1.0625rem;
+  line-height:1.5;
+  letter-spacing:.03em;
   color:var(--ink-soft);
-  margin-top:.125rem;
+  margin-top:.25rem;
 }
 
 
@@ -1054,16 +1055,16 @@ ul,ol{ list-style:none; }
   border-radius:999px;
   font-size:.6875rem; letter-spacing:.22em; text-indent:.22em;
   text-transform:uppercase; text-decoration:none;
-  color:var(--rose-gold);
-  background:rgba(255,252,250,.92);
-  border:1px solid rgba(188,130,122,.5);
-  box-shadow:0 10px 30px -16px rgba(120,70,70,.22);
+  color:var(--ivory-warm);
+  background:linear-gradient(135deg, var(--rose-gold), var(--rose-dust));
+  border:1px solid rgba(255,252,250,.22);
+  box-shadow:0 10px 30px -16px rgba(120,70,70,.4), inset 0 1px 0 rgba(255,255,255,.22);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
-  transition:transform .2s var(--ease), background-color .2s var(--ease);
+  transition:transform .2s var(--ease), background .2s var(--ease);
 }
 .rsvpbar__btn:active{ transform:scale(.975); }
-.rsvpbar__btn:hover{ background-color:#FFFCFA; }
+.rsvpbar__btn:hover{ background:linear-gradient(135deg, var(--rose-deep), var(--rose-gold)); }
 
 
 /* ── 16 · Animaciones ───────────────────────────────────────────────────── */
