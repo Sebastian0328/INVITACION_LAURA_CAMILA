@@ -36,7 +36,7 @@ const EVENT_CONFIG = {
     date: '2026-11-14T19:00:00-05:00',
     timezone: 'America/Bogota',
     locale: 'es-CO',
-    durationHours: 5               // usado para el calendario (.ics / Google)
+    durationHours: 7               // usado para el calendario (.ics / Google) — termina 2:00 a. m.
   },
 
   /* ── Lugar ─────────────────────────────────────────────────────────────
@@ -139,7 +139,7 @@ const EVENT_CONFIG = {
     { time: '9:00 p. m.',  title: 'Vals' },
     { time: '9:30 p. m.',  title: 'Brindis' },
     { time: '10:00 p. m.', title: 'Baile' },
-    { time: '12:00 a. m.', title: 'Despedida' }
+    { time: '2:00 a. m.',  title: 'Despedida' }
   ],
 
   /* ── Textos ──────────────────────────────────────────────────────────── */
