@@ -79,7 +79,7 @@
     const box = document.createElement('div');
     box.className = 'photo__ph';
     box.innerHTML =
-      '<svg viewBox="0 0 52 52" fill="none" stroke="#C98DA0" stroke-width="1.4" aria-hidden="true">' +
+      '<svg viewBox="0 0 52 52" fill="none" stroke="#6C93AD" stroke-width="1.4" aria-hidden="true">' +
       '<circle cx="26" cy="19" r="8.5"/>' +
       '<path d="M10 44C12 32 40 32 42 44"/>' +
       '<path d="M17 13Q26 4 35 13" stroke="#C6A575"/></svg>';

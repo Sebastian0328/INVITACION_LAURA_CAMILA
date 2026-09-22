@@ -64,10 +64,8 @@ const EVENT_CONFIG = {
   /* ── Código de vestimenta ────────────────────────────────────────────── */
   dressCode: {
     type: 'Formal',
-    note: 'Se agradece evitar prendas en color rosa claro, tono reservado para la quinceañera.',
-    reservedColors: [
-      { name: 'Rosa claro', hex: '#F3D7DE' }
-    ]
+    note: null,
+    reservedColors: []
   },
 
   /* ── Regalos ─────────────────────────────────────────────────────────────
